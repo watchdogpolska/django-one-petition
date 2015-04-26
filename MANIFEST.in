@@ -2,3 +2,4 @@ include LICENSE
 include README.rst
 recursive-include petition/static *
 recursive-include petition/templates *
+recursive-include petition/locale *
