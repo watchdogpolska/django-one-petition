@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name='django-one-petition',
-    version='0.0.2',
+    version='0.0.3',
     author=u'Adam Dobrawy',
     author_email='naczelnik@jawnosc.tk',
     packages=find_packages(),

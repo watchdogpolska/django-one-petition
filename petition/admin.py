@@ -26,7 +26,7 @@ class LocationListFilter(admin.SimpleListFilter):
 
 @admin.register(Signature)
 class SignatureAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'name', 'city', 'email', 'newsletter', 'lat', 'lng')
+    list_display = ('pk', 'first_name', 'second_name', 'city', 'email', 'newsletter', 'lat', 'lng')
     list_filter = ('newsletter', 'created_on', LocationListFilter)
     readonly_fields = ('location_picker', )
 
