@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name='django-one-petition',
-    version='0.0.3',
+    version='0.0.4',
     author=u'Adam Dobrawy',
     author_email='naczelnik@jawnosc.tk',
     packages=find_packages(),
@@ -16,6 +16,7 @@ setup(
         'django',
         'django-braces',
         'django-constance',
+	'django-import-export',
     ],
     classifiers=[
         'Environment :: Web Environment',

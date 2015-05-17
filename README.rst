@@ -8,10 +8,11 @@ Django-one-petition is a simple Django app to conduct Web-based petition. We pro
 Quick start
 -----------
 
-1. Add "petition" to your INSTALLED_APPS setting like this::
+1. Add "petition" and "import_export" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
+	'import_export',
         'petition',
     ]
 

@@ -30,3 +30,10 @@ class Signature(models.Model):
 
     def name(self):
         return "%s %s" % (self.first_name, self.second_name)
+
+    def __unicode__(self):
+        return "%s (#%d)" % (self.name(), self.pk)
+
+    class Meta:
+        verbose_name = _("Signature")
+        verbose_name_plural = _("Signatures")
