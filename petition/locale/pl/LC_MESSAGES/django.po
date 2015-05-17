@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 00:04+0000\n"
-"PO-Revision-Date: 2015-04-20 02:04+0100\n"
+"POT-Creation-Date: 2015-05-17 11:33+0000\n"
+"PO-Revision-Date: 2015-05-17 13:33+0100\n"
 "Last-Translator: Adam Dobrawy <naczelnik@jawnosc.tk>\n"
 "Language-Team: Adam Dobrawy <naczelnik@Jawnosc.tk>\n"
 "Language: pl_PL\n"
@@ -17,29 +17,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: forms.py:26
+#: admin.py:20
+#| msgid "location filled"
+msgid "Location picker"
+msgstr "Pobieracz pozycji"
+
+#: filters.py:8
+msgid "location filled"
+msgstr "lokalizacja określona"
+
+#: filters.py:15
+msgid "yes"
+msgstr "Tak"
+
+#: filters.py:16
+msgid "no"
+msgstr "Nie"
+
+#: forms.py:25
 msgid "Sign"
 msgstr "Podpisz"
 
-#: models.py:17
+#: models.py:18
 msgid "First name"
 msgstr "Imię"
 
-#: models.py:18
+#: models.py:19
 msgid "Second name"
 msgstr "Nazwisko"
 
-#: models.py:19
+#: models.py:20
 msgid "E-mail"
 msgstr "E-mail"
 
-#: models.py:20
+#: models.py:21
 msgid "City"
 msgstr "Miejscowość"
-
-#: models.py:21
-msgid "Location"
-msgstr "Lokalizacja"
 
 #: models.py:22
 msgid "Telephone"
@@ -58,12 +71,24 @@ msgid "Created on"
 msgstr "Utworzone o"
 
 #: models.py:26
+msgid "Newsletter acceptation"
+msgstr "Akceptacja newslettera"
+
+#: models.py:27
 msgid "Modified on"
 msgstr "Zmodyfikowane o"
 
-#: models.py:27
+#: models.py:28
 msgid "Visible"
 msgstr "Widoczne"
+
+#: models.py:38
+msgid "Signature"
+msgstr "Podpis"
+
+#: models.py:39
+msgid "Signatures"
+msgstr "Podpis"
 
 #~ msgid "Name"
 #~ msgstr "Imię i nazwisko"
