@@ -21,9 +21,9 @@ class SignatureAdmin(ImportExportModelAdmin):
 
     class Media:
         js = [
-            'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places',
-            'http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js',
-            'https://cdn.rawgit.com/Logicify/jquery-locationpicker-plugin/master/src/locationpicker.jquery.js',
+            '//maps.googleapis.com/maps/api/js?sensor=false&libraries=places',
+            '//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js',
+            '//cdn.rawgit.com/Logicify/jquery-locationpicker-plugin/master/src/locationpicker.jquery.js',
             '/static/petition/map_admin.js',
         ]
         css = {"all": ('/static/petition/map_admin.css', )}
