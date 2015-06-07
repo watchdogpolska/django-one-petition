@@ -26,3 +26,20 @@ Quick start
    to manage a petition (you'll need the Admin app enabled).
 
 5. Visit http://127.0.0.1:8000/petition/ to participate in the petition.
+
+Settings
+-----------
+
+There is some settings to set by django-constance (or settings.py):
+```
+python
+CONSTANCE_CONFIG = {
+    'AGGREMENT_TEXT': ("I accept", 'Text of aggrement in submission form of "ankieta"'),  # Required
+    "NEWSLETTER_TEXT": ("I want sign to newsletter"),  # Required
+    'NEWSLETTER_DEFAULT': (True, "Set default checked or not for newsletter aggrement"),  # Required
+    'ISSUE_SPOT': ("<p>Lorem ipsum</p>", "HTML code of video about petition"),  # Default template
+    'ISSUE_DESCRIPTION': ("<p>Lorem ipsum</p>", "HTML code of description of petition"),  # Default template
+    'LETTER_TEXT': ("<p><b>To:</b>Lorem</p><p>ipsum</p>", "HTML code of letter with recipient"),  # Default template
+    'LETTER_THANK_YOU': ("<p>Lorem ipsum</p>", "HTML code of thank you text"),  # Default template
+}
+```

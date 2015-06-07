@@ -6,8 +6,8 @@ from django.utils.translation import ugettext as _
 from braces.forms import UserKwargModelFormMixin
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
-from constance import config
 from .models import Signature
+from .utils import get_settings
 
 
 class TelephoneInput(TextInput):
@@ -24,8 +24,9 @@ class SignatureForm(UserKwargModelFormMixin, ModelForm):
         self.helper.form_method = 'post'
         self.helper.add_input(Submit('submit', _('Sign'), css_class="btn-lg btn-block"))
         self.fields['telephone'].widget = TelephoneInput()
-        self.fields['newsletter'].label = config.NEWSLETTER_TEXT
-        self.fields['giodo'].label = config.AGGREMENT_TEXT
+        self.fields['newsletter'].label = get_settings('NEWSLETTER_TEXT')
+        self.fields['giodo'].label = get_settings('AGGREMENT_TEXT')
+        self.fields['newsletter'].initial = get_settings('NEWSLETTER_DEFAULT')
 
     class Meta:
         model = Signature
