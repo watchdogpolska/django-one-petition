@@ -22,7 +22,7 @@ class SignatureForm(UserKwargModelFormMixin, ModelForm):
         self.helper = FormHelper()
         self.helper.form_action = reverse('petition:create')
         self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', _('Sign'), css_class="btn-lg btn-block"))
+        self.helper.add_input(Submit('submit', _('Sign'), css_class="btn-sign btn-lg btn-block"))
         self.fields['telephone'].widget = TelephoneInput()
         self.fields['newsletter'].label = get_settings('NEWSLETTER_TEXT')
         self.fields['giodo'].label = get_settings('AGGREMENT_TEXT')
