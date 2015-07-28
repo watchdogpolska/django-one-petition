@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-17 11:33+0000\n"
-"PO-Revision-Date: 2015-05-17 13:33+0100\n"
+"POT-Creation-Date: 2015-07-28 03:19+0000\n"
+"PO-Revision-Date: 2015-07-28 05:19+0100\n"
 "Last-Translator: Adam Dobrawy <naczelnik@jawnosc.tk>\n"
 "Language-Team: Adam Dobrawy <naczelnik@Jawnosc.tk>\n"
 "Language: pl_PL\n"
@@ -17,8 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: admin.py:20
-#| msgid "location filled"
+#: admin.py:23
 msgid "Location picker"
 msgstr "Pobieracz pozycji"
 
@@ -34,59 +33,84 @@ msgstr "Tak"
 msgid "no"
 msgstr "Nie"
 
-#: forms.py:25
+#: forms.py:26
 msgid "Sign"
 msgstr "Podpisz"
 
-#: models.py:18
+#: models.py:11
+msgid "Title"
+msgstr "Tytuł"
+
+#: models.py:12
+msgid "Text"
+msgstr "Treść"
+
+#: models.py:13
+msgid "Thank you text"
+msgstr "Tekst podziękowania"
+
+#: models.py:14
+msgid "Public available"
+msgstr "Dostępność publiczna"
+
+#: models.py:31 models.py:52
+msgid "Petition"
+msgstr "Petycja"
+
+#: models.py:32
+#| msgid "Petition"
+msgid "Petitions"
+msgstr "Petycje"
+
+#: models.py:53
 msgid "First name"
 msgstr "Imię"
 
-#: models.py:19
+#: models.py:54
 msgid "Second name"
 msgstr "Nazwisko"
 
-#: models.py:20
+#: models.py:55
 msgid "E-mail"
 msgstr "E-mail"
 
-#: models.py:21
+#: models.py:56
 msgid "City"
 msgstr "Miejscowość"
 
-#: models.py:22
+#: models.py:57
 msgid "Telephone"
 msgstr "Telefon"
 
-#: models.py:23
+#: models.py:58
 msgid "Latitude"
 msgstr "Szerokość geograficzna"
 
-#: models.py:24
+#: models.py:59
 msgid "Longitude"
 msgstr "Wysokosć geograficzna"
 
-#: models.py:25
+#: models.py:60
 msgid "Created on"
 msgstr "Utworzone o"
 
-#: models.py:26
+#: models.py:61
 msgid "Newsletter acceptation"
 msgstr "Akceptacja newslettera"
 
-#: models.py:27
+#: models.py:62
 msgid "Modified on"
 msgstr "Zmodyfikowane o"
 
-#: models.py:28
+#: models.py:63
 msgid "Visible"
 msgstr "Widoczne"
 
-#: models.py:38
+#: models.py:73
 msgid "Signature"
 msgstr "Podpis"
 
-#: models.py:39
+#: models.py:74
 msgid "Signatures"
 msgstr "Podpis"
 

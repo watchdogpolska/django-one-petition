@@ -46,6 +46,12 @@
         <h2>
             Lista podpisów
         </h2>
+        {% if petitions|length >= 2 %}
+        {% for p in petitions %}
+            <a href="{{p.get_absolute_url}}">{{p}} ({{p.signature_count}})</a>
+        {% endfor %}
+        {% endif %}
+
         <table class="table table-striped">
             <thead>
                 <tr>

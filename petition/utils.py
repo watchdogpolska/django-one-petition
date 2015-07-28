@@ -1,5 +1,6 @@
 from django.conf import settings
 
+
 try:
     from constance import config
 

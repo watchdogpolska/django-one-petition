@@ -7,7 +7,7 @@
         <div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
         <div class="blockContent">
             <h2>Posłuchaj eksperta</h2>
-            {{config.ISSUE_SPOT | safe}}
+            {# {{config.ISSUE_SPOT | safe}} #}
         </div>
     </div>
     <div class="clearfix"></div>
@@ -15,7 +15,7 @@
         <div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
         <div class="blockContent">
             <h2>Opis problemu</h2>
-        {{config.ISSUE_DESCRIPTION | safe}}
+        {# {{config.ISSUE_DESCRIPTION | safe}} #}
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
     <div class="blockFoldHold"><div class="blockFold"></div><div class="blockFoldClear"></div></div>
     <div class="blockContent">
         <h2>Podpisz petycję</h2>
-        {{config.LETTER_TEXT | safe}}
+            {{petition.text | safe}}
             <h3 class="text-center">Twoje dane</h3>
             <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
             {% crispy form %}

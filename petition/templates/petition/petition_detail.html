@@ -1,4 +1,5 @@
 {% extends 'petition/base.html' %}
 {% block content %}
-{{object.thank_you | safe}}
+<h2>{{object.title}}</h2>
+{{object.text|safe}}
 {% endblock %}

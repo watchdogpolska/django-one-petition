@@ -16,7 +16,8 @@ setup(
         'django',
         'django-braces',
         'django-constance',
-	'django-import-export',
+        'django-import-export',
+        'swapper'
     ],
     classifiers=[
         'Environment :: Web Environment',
