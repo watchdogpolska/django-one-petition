@@ -21,9 +21,9 @@ class AbstractPetition(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
-        if self.main:
+        if self.main and self.public:
             Petition = swapper.load_model("petition", "Petition")
-            Petition.objects.all().update(main=False)
+            Petition.objects.filter(public=True).all().update(main=False)
         super(AbstractPetition, self).save(*args, **kwargs)
 
     class Meta:

@@ -27,6 +27,9 @@ class SignatureList(OrderableListMixin, AjaxResponseMixin, ListView):
         if 'slug' in self.kwargs:
             context['petition'] = get_object_or_404(Petition.objects.filter(public=True),
                 slug=self.kwargs['slug'])
+        else:
+            context['petition'] = get_object_or_404(Petition.objects.filter(public=True),
+                main=True)
         context['count'] = Signature.objects.visible().count()
         context['petitions'] = self.get_petition_list()
         return context
