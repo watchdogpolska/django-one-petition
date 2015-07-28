@@ -16,16 +16,4 @@ class Migration(migrations.Migration):
             name='petition',
             options={},
         ),
-        migrations.AlterField(
-            model_name='petition',
-            name='slug',
-            field=models.SlugField(unique=True),
-            preserve_default=True,
-        ),
-        migrations.AlterField(
-            model_name='signature',
-            name='petition',
-            field=models.ForeignKey(verbose_name='Petition', to=swapper.get_model_name('petition', 'Petition')),
-            preserve_default=True,
-        ),
     ]

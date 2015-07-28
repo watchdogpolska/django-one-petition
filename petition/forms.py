@@ -29,8 +29,8 @@ class SignatureForm(UserKwargModelFormMixin, ModelForm):
         self.fields['giodo'].label = get_settings('AGGREMENT_TEXT')
         self.fields['newsletter'].initial = get_settings('NEWSLETTER_DEFAULT')
 
-    def save(commit=True, *args, **kwargs):
-        obj = super(SignatureForm, commit=False).save(*args, commit=False, **kwargs)
+    def save(self, commit=True, *args, **kwargs):
+        obj = super(SignatureForm, self).save(*args, commit=False, **kwargs)
         obj.petition = Petition.objects.get(main=True)
         if commit:
             obj.save()
