@@ -4,6 +4,13 @@ from __future__ import unicode_literals
 from django.db import models, migrations
 
 
+def add_initial(apps, schema_editor):
+    # We can't import the Person model directly as it may be a newer
+    # version than this migration expects. We use the historical version.
+    Petition = apps.get_model("petition", "Petition")
+    Petition(pk=1, slug='a', title='x', text='z', thank_you='a').save()
+
+
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -32,6 +39,7 @@ class Migration(migrations.Migration):
             name='signature',
             options={'verbose_name': 'Signature', 'verbose_name_plural': 'Signatures'},
         ),
+        migrations.RunPython(add_initial),
         migrations.AddField(
             model_name='signature',
             name='petition',
