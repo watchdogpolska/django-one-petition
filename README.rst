@@ -31,8 +31,9 @@ Settings
 -----------
 
 There is some settings to set by django-constance (or settings.py):
-```
-python
+
+```python
+
 CONSTANCE_CONFIG = {
     'AGGREMENT_TEXT': ("I accept", 'Text of aggrement in submission form of "ankieta"'),  # Required
     "NEWSLETTER_TEXT": ("I want sign to newsletter"),  # Required
