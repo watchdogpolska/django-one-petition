@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404
 from django.db.models import Count
 from braces.views import OrderableListMixin, AjaxResponseMixin
-from .forms import SignatureForm
+from .utils import get_signature_form
 import swapper
 
 Petition = swapper.load_model("petition", "Petition")
@@ -66,7 +66,7 @@ class SignatureApiList(ListView):
 
 class SignatureCreate(CreateView):
     model = Signature
-    form_class = SignatureForm
+    form_class = get_signature_form()
 
     def get_context_data(self, **kwargs):
         context = super(SignatureCreate, self).get_context_data(**kwargs)
@@ -90,4 +90,4 @@ class SignatureCreateDone(DetailView):
     template_name = 'petition/signature_thank_you.html'
 
     def get_object(self):
-        return Petition.objects.filter(main=True)
+        return Petition.objects.filter(main=True).get()
