@@ -17,7 +17,7 @@ class TelephoneInput(TextInput):
 
 class BaseSignatureForm(ModelForm):
     def save(self, commit=True, *args, **kwargs):
-        obj = super(SignatureForm, self).save(*args, commit=False, **kwargs)
+        obj = super(BaseSignatureForm, self).save(*args, commit=False, **kwargs)
         obj.petition = Petition.objects.get(main=True)
         if commit:
             obj.save()
