@@ -12,7 +12,7 @@ Signature = swapper.load_model("petition", "Signature")
 @admin.register(Signature)
 class SignatureAdmin(ImportExportModelAdmin):
     resource_class = SignatureResource
-    list_display = ('pk', 'first_name', 'second_name', 'city', 'email', 'newsletter', 'lat', 'lng')
+    list_display = ('pk', 'first_name', 'second_name', 'email', )
     list_filter = ('newsletter', 'petition', 'created_on', LocationListFilter)
     readonly_fields = ('location_picker', )
 

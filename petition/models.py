@@ -53,12 +53,7 @@ class AbstractSignature(models.Model):
     first_name = models.CharField(max_length=100, verbose_name=_('First name'))
     second_name = models.CharField(max_length=100, verbose_name=_('Second name'))
     email = models.EmailField(verbose_name=_("E-mail"))
-    city = models.CharField(max_length=100, verbose_name=_("City"))
-    telephone = models.CharField(max_length=12, null=True, blank=True, verbose_name=_("Telephone"))
-    lat = models.FloatField(null=True, blank=True, verbose_name=_("Latitude"))
-    lng = models.FloatField(null=True, blank=True, verbose_name=_("Longitude"))
     created_on = models.DateTimeField(auto_now_add=True, verbose_name=_("Created on"))
-    newsletter = models.BooleanField(default=True, verbose_name=_("Newsletter acceptation"))
     modified_on = models.DateTimeField(auto_now=True, verbose_name=_("Modified on"))
     visible = models.BooleanField(default=True, verbose_name=_("Visible"))
     objects = SignatureQuerySet.as_manager()
@@ -76,5 +71,11 @@ class AbstractSignature(models.Model):
 
 
 class Signature(AbstractSignature):
+    newsletter = models.BooleanField(default=True, verbose_name=_("Newsletter acceptation"))
+    city = models.CharField(max_length=100, verbose_name=_("City"))
+    telephone = models.CharField(max_length=12, null=True, blank=True, verbose_name=_("Telephone"))
+    lat = models.FloatField(null=True, blank=True, verbose_name=_("Latitude"))
+    lng = models.FloatField(null=True, blank=True, verbose_name=_("Longitude"))
+
     class Meta:
         swappable = swapper.swappable_setting('petition', 'Signature')
