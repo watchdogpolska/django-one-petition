@@ -1,8 +1,9 @@
 from import_export import resources
-from .models import Signature
+import swapper
+
+Signature = swapper.load_model("petition", "Signature")
 
 
 class SignatureResource(resources.ModelResource):
     class Meta:
-        exclude = ('created_on', 'modified_on')
         model = Signature
