@@ -4,6 +4,7 @@ Django-one-petition
 
 Django-one-petition is a simple Django app to conduct Web-based petition. We provide maps of signatures.
 
+This application is DEPRECATED. See https://github.com/watchdogpolska/petycja-norweskie for alternative.
 
 Quick start
 -----------
