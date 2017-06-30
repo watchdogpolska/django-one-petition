@@ -9,7 +9,8 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('petition', '0005_remove_signature_location'),
-        swapper.dependency('petition', 'Petition')
+        swapper.dependency('petition', 'Petition'),
+        swapper.dependency('petition', 'Signature')
     ]
 
     operations = [
@@ -34,7 +35,9 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterModelOptions(
             name='signature',
-            options={'verbose_name': 'Signature', 'verbose_name_plural': 'Signatures'},
+            options={'verbose_name': 'Signature',
+                     'verbose_name_plural': 'Signatures',
+                     'swappable': swapper.swappable_setting('petition', 'Signature')}
         ),
         migrations.AddField(
             model_name='signature',
