@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='petition',
-            options={},
+            options={'swappable': swapper.swappable_setting('petition', 'Petition'),},
         ),
     ]
