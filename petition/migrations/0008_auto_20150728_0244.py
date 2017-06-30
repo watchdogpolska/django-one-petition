@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='signature',
-            options={'swappable': swapper.swappable_setting('petition', 'Petition')},
+            options={'swappable': swapper.swappable_setting('petition', 'Signature')},
         ),
     ]
