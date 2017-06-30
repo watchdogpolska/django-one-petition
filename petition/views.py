@@ -26,10 +26,10 @@ class SignatureList(OrderableListMixin, AjaxResponseMixin, ListView):
         context = super(SignatureList, self).get_context_data(**kwargs)
         if 'slug' in self.kwargs:
             context['petition'] = get_object_or_404(Petition.objects.filter(public=True),
-                slug=self.kwargs['slug'])
+                                                    slug=self.kwargs['slug'])
         else:
             context['petition'] = get_object_or_404(Petition.objects.filter(public=True),
-                main=True)
+                                                    main=True)
         context['count'] = Signature.objects.visible().count()
         context['petitions'] = self.get_petition_list()
         return context
@@ -59,8 +59,8 @@ class SignatureApiList(ListView):
     def get(self, request, *args, **kwargs):
         self.object_list = self.get_queryset()
         data = [dict((field, getattr(obj, field))
-            for field in self.ajax_fields)
-            for obj in self.object_list]
+                     for field in self.ajax_fields)
+                for obj in self.object_list]
         return JsonResponse(data, safe=False)
 
 
@@ -71,7 +71,7 @@ class SignatureCreate(CreateView):
     def get_context_data(self, **kwargs):
         context = super(SignatureCreate, self).get_context_data(**kwargs)
         context['petition'] = (Petition.objects.annotate(signature_count=Count('signature')).
-            get(main=True))
+                               get(main=True))
         return context
 
     def get_success_url(self):
